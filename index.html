@@ -1,13 +1,10 @@
-
-Copy
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CDK Digital Retailing: A Practitioner's Market Analysis</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,6 +48,12 @@ Copy
         ::-webkit-scrollbar-thumb:hover {
             background: #4b5563;
         }
+        /* Suppress Tailwind CDN dev overlay */
+        [style*="position: fixed"][style*="z-index"],
+        .tw-cdn-banner,
+        body > div[style*="position: fixed"]:first-child {
+            display: none !important;
+        }
         .source-label {
             font-size: 0.65rem;
             color: #6b7280;
@@ -59,7 +62,7 @@ Copy
     </style>
 </head>
 <body class="antialiased selection:bg-teal-500 selection:text-white">
- 
+
     <!-- Hero Section -->
     <header class="relative overflow-hidden bg-gray-900 border-b border-gray-800 shadow-2xl">
         <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMzNzQxNTEiIGZpbGwtb3BhY2l0eT0iMC4xNSIvPjwvc3ZnPg==')] opacity-30"></div>
@@ -81,9 +84,9 @@ Copy
             </div>
         </div>
     </header>
- 
+
     <main class="max-w-5xl mx-auto px-4 py-16 space-y-24">
- 
+
         <!-- Section 1: The Practitioner Advantage -->
         <section id="practitioner-advantage" class="scroll-mt-20">
             <div class="mb-10">
@@ -104,7 +107,7 @@ Copy
                         <li class="flex items-start"><span class="text-teal-500 mr-2">✓</span> Understands how roadmap trade-offs affect dealer adoption months downstream.</li>
                     </ul>
                 </div>
- 
+
                 <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group hover:border-blue-500/50 transition-colors">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
                     <div class="text-blue-400 text-3xl mb-4">&#x1F3E2;</div>
@@ -119,14 +122,14 @@ Copy
                 </div>
             </div>
         </section>
- 
+
         <!-- Section 2: DXP Architecture -->
         <section id="dxp-architecture" class="scroll-mt-20">
             <div class="mb-10 text-center">
                 <h2 class="text-3xl font-bold text-white tracking-tight">Decoding the DXP Platform</h2>
                 <p class="mt-3 text-gray-400 text-lg max-w-2xl mx-auto">CDK's value prop is a unified ecosystem. Here is how the modules actually perform in a live dealership environment.</p>
             </div>
- 
+
             <div class="glass-panel rounded-2xl p-2 md:p-6">
                 <!-- Tabs -->
                 <div class="flex flex-wrap gap-2 mb-8 justify-center" id="architecture-tabs">
@@ -135,7 +138,7 @@ Copy
                     <button class="tab-btn px-5 py-2 rounded-full text-sm font-medium transition-all" data-target="tab-fandi">F&I & Menu Vantage</button>
                     <button class="tab-btn px-5 py-2 rounded-full text-sm font-medium transition-all" data-target="tab-cdp">CDP (NADA '26)</button>
                 </div>
- 
+
                 <!-- Tab Content -->
                 <div class="px-4 md:px-8 pb-8 min-h-[250px]">
                     
@@ -161,7 +164,7 @@ Copy
                             </div>
                         </div>
                     </div>
- 
+
                     <!-- Desking -->
                     <div id="tab-desking" class="tab-content hidden">
                         <div class="flex flex-col md:flex-row gap-8 items-start">
@@ -184,7 +187,7 @@ Copy
                             </div>
                         </div>
                     </div>
- 
+
                     <!-- F&I -->
                     <div id="tab-fandi" class="tab-content hidden">
                         <div class="flex flex-col md:flex-row gap-8 items-start">
@@ -207,7 +210,7 @@ Copy
                             </div>
                         </div>
                     </div>
- 
+
                     <!-- CDP -->
                     <div id="tab-cdp" class="tab-content hidden">
                         <div class="flex flex-col md:flex-row gap-8 items-start">
@@ -230,11 +233,11 @@ Copy
                             </div>
                         </div>
                     </div>
- 
+
                 </div>
             </div>
         </section>
- 
+
         <!-- Section 3: The Market Reality (Adoption & Friction) -->
         <section id="adoption-friction" class="scroll-mt-20">
             <h2 class="text-3xl font-bold text-white mb-8 text-center tracking-tight">The "Repeat Steps" Problem</h2>
@@ -275,14 +278,14 @@ Copy
                 </div>
             </div>
         </section>
- 
+
         <!-- Section 4: Competitive Landscape -->
         <section id="competitive-landscape" class="scroll-mt-20">
             <div class="mb-10 text-center">
                 <h2 class="text-3xl font-bold text-white tracking-tight">The Competitive Battlefield</h2>
                 <p class="mt-3 text-gray-400 text-lg max-w-2xl mx-auto">The digital retailing market is estimated to hit $5 billion by 2033. Here is who is fighting for the workflow.</p>
             </div>
- 
+
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- Tekion -->
                 <div class="p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 hover:border-teal-500/50 transition-colors">
@@ -295,7 +298,7 @@ Copy
                         <strong class="text-gray-300">CDK's Counter:</strong> Emphasize scale (15k vs 2k dealers), the free Foundations Suite upgrade, and the massive switching cost of replacing a legacy DMS.
                     </div>
                 </div>
- 
+
                 <!-- Cox Auto -->
                 <div class="p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-colors">
                     <div class="flex justify-between items-start mb-4">
@@ -307,7 +310,7 @@ Copy
                         <strong class="text-gray-300">CDK's Counter:</strong> Cox integrations are notoriously complex and expensive. CDK offers a tighter showroom-to-F&I workflow within a single platform.
                     </div>
                 </div>
- 
+
                 <!-- Darwin -->
                 <div class="p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 hover:border-purple-500/50 transition-colors">
                     <div class="flex justify-between items-start mb-4">
@@ -319,7 +322,7 @@ Copy
                         <strong class="text-gray-300">CDK's Counter:</strong> Push Menu Vantage Platinum's auto-archiving and deal jacket workflow. Darwin excels at F&I presentation, but CDK owns the end-to-end contracting pipeline.
                     </div>
                 </div>
- 
+
                 <!-- Reynolds -->
                 <div class="p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 hover:border-gray-500/50 transition-colors">
                     <div class="flex justify-between items-start mb-4">
@@ -334,14 +337,14 @@ Copy
             </div>
             <p class="source-label mt-4 text-center">Market size projection: Grand View Research, Automotive Digital Retailing Market Report, 2024</p>
         </section>
- 
+
         <!-- Section 5: Where I'd Start -->
         <section id="first-priorities" class="scroll-mt-20">
             <div class="mb-10 text-center">
                 <h2 class="text-3xl font-bold text-white tracking-tight">Where Product Thinking Meets Dealer Reality</h2>
                 <p class="mt-3 text-gray-400 text-lg max-w-2xl mx-auto">Based on the friction points above, these are the product themes I'd want to explore first.</p>
             </div>
- 
+
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="glass-panel p-6 rounded-xl hover:border-teal-500/30 transition-colors">
                     <div class="text-2xl mb-3">🔗</div>
@@ -363,9 +366,9 @@ Copy
                 </div>
             </div>
         </section>
- 
+
     </main>
- 
+
     <footer class="bg-gray-900 py-10 mt-12 border-t border-gray-800 text-center">
         <div class="max-w-3xl mx-auto px-4">
             <p class="text-teal-500 font-semibold mb-2">James Bonaguro</p>
@@ -377,12 +380,12 @@ Copy
             </div>
         </div>
     </footer>
- 
+
     <script>
         // Tab functionality for DXP Architecture
         const tabBtns = document.querySelectorAll('.tab-btn');
         const tabContents = document.querySelectorAll('.tab-content');
- 
+
         tabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 tabBtns.forEach(b => {
@@ -393,7 +396,7 @@ Copy
                     c.classList.remove('block');
                     c.classList.add('hidden');
                 });
- 
+
                 btn.classList.add('active', 'bg-teal-600', 'text-white', 'border-teal-600');
                 btn.classList.remove('text-gray-400', 'border-gray-700');
                 
@@ -402,7 +405,7 @@ Copy
                 document.getElementById(targetId).classList.add('block');
             });
         });
- 
+
         // Initialize Chart.js - Multi-metric comparison
         document.addEventListener('DOMContentLoaded', () => {
             const ctx = document.getElementById('impactChart').getContext('2d');
